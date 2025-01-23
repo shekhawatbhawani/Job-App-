@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.rotate-img {
+    transition: transform 0.7s ease-in-out; /* Smooth transition */
+  }
+
+  .rotate-img:hover {
+    transform: rotateY(-360deg); /* Rotates image from right to left */
+  }
