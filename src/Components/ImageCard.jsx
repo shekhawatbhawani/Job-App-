@@ -36,7 +36,7 @@ const ImageCard = () => {
   const imageUrls = [
     "https://jobx-app.vercel.app/static/media/noida.3fabae3d5f2fcac124d5.png",
     "https://jobx-app.vercel.app/static/media/jabalpur.30c05dbdc28287e5dd9c.png",
-   // "https://jobx-app.vercel.app/static/media/kolkata.6fe209d921d634345bea.png",
+    "https://jobx-app.vercel.app/static/media/kolkata.6fe209d921d634345bea.png",
     "https://jobx-app.vercel.app/static/media/Bengaluru.5b1620c4379a4f2a873c.png",
     "https://jobx-app.vercel.app/static/media/bhopal.2c87af791a94fa10a21e.png",
     "https://jobx-app.vercel.app/static/media/Gwalior.49ff4554ba1c777a2fc9.png",

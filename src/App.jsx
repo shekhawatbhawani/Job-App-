@@ -1,37 +1,27 @@
-import { useState } from 'react'
-import './App.css'
-import FilterSearch from './Components/FilterSearch'
-import Heading1 from './Components/Heading1'
-import ImageCard from './Components/ImageCard'
-import ImageFoot from './Components/ImageFoot'
-import JobApply from './Components/JobApply'
-import NavBar from './Components/NavBar'
-import CompanyApply from './Components/CompanyApply'
-import Jobs from './Components/Jobs'
-import Offer from './Components/Offer'
-import Talented from './Components/Talented'
-import Footer from './Components/Footer'
 
+import './App.css'
+import NavBar from './Components/NavBar'
+import Footer from './Components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Body from './Components/Body';
+import Apply from './Components/Apply';
+import PostJob from './Components/PostJob';
+import LearnMore from './Components/LearnMore';
+import ViewJob from './Components/ViewJob';
 function App() {
-  let [job ,setJob] = useState("Job")
-  let [company ,setCompany] = useState("Comapnies")
+ 
   return (
     <>
+    <Router>
      <NavBar/>
-     <FilterSearch/>
-     <ImageCard/>
-     <ImageFoot/>
-     <Heading1 job={job}/>
-     <JobApply/>
-     <Heading1 job={company}/>
-     <CompanyApply/>
-     <Heading1 job={job}/>
-     <JobApply/>
-     <Heading1 job={company}/>
-     <CompanyApply/>
-     <Jobs/>
-     <Offer/>
-     <Talented/>
+     <Routes>
+      <Route path='/' element={ <Body/>}></Route>
+      <Route path='/ApplyJob' element={<Apply/>}></Route>
+      <Route path='/PostJob' element={<PostJob/>}></Route>
+      <Route path='/PostJobsLearn' element={<LearnMore/>}></Route>
+      <Route path='/ViewJob' element={<ViewJob/>}></Route>
+     </Routes>
+     </Router>
      <Footer/>
     </>
   )
