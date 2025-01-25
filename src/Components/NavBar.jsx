@@ -55,7 +55,7 @@ const Navbar = () => {
         <li className="my-3 font-bold">BLOG</li>
       </ul>
 
-      <ul className={`bg-white w-fit text-black p-4 ml-9 absolute top-16 right-10 ${isSettingOpen ? 'block' : 'hidden'}`}>
+      <ul className={`bg-white w-fit text-black p-4 z-10 ml-9 absolute top-16 right-10 ${isSettingOpen ? 'block' : 'hidden'}`}>
       <li className="my-3 font-bold">Profile</li>
         <li className="my-3 font-bold">Account</li>
         <li className="my-3 font-bold">Dashboard</li>
