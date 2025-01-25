@@ -1,4 +1,5 @@
 import React from "react";
+
 import { MdAddLocation } from "react-icons/md";
 import { Link } from "react-router-dom";
 import {
@@ -10,9 +11,49 @@ import {
 } from "react-icons/fa";
 import { RiVercelFill } from "react-icons/ri";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import JobApply from "./JobApply";
 const ViewJob = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+  const jobRoles = [
+    "Node Js Developer",
+    "Content Writer",
+    "Web Developer",
+    "UI/UX Designer",
+    "Digital Marketing",
+  ];
   return (
-    <div>
+    <div className="bg-gray-300">
+      {/* Header *****************************************  */}
       <div className="bg-black text-white p-5 pl-20 text-lg">
         <h1>
           <Link
@@ -24,7 +65,8 @@ const ViewJob = () => {
           <span> / Jobname</span>
         </h1>
       </div>
-      <div className="container mx-auto px-4 md:px-8 lg:px-16">
+      {/* Main ************************* */}
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 mt-10">
         <div className="md:flex md:space-x-8">
           {/* Main Content Section */}
           <div className="md:w-2/3 bg-white p-4 rounded-lg shadow-md mb-8 md:mb-0">
@@ -99,16 +141,18 @@ const ViewJob = () => {
               <span>Fresher</span>
             </div>
 
-            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">
+            <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-300 transition duration-300">
               Apply Now
             </button>
           </div>
 
           {/* Sidebar Section */}
-          <aside className="md:w-1/3 bg-white p-4 rounded-lg shadow-md">
-            <h1 className="text-2xl font-bold mb-4">APPLY NOW</h1>
+          <aside className="md:w-1/3 bg-white rounded-lg shadow-md">
+            <h1 className="text-2xl font-bold mb-4 text-center bg-blue-600 p-2 hover:cursor-pointer hover:bg-blue-300">
+              APPLY NOW
+            </h1>
 
-            <div className="space-y-4">
+            <div className="space-y-4 p-4">
               <div>
                 <h3 className="font-semibold">Views</h3>
                 <p>7</p>
@@ -131,9 +175,11 @@ const ViewJob = () => {
               </div>
             </div>
 
-            <button className="mt-6 bg-gray-200 text-gray-800 py-2 px-4 rounded flex items-center space-x-2 hover:bg-gray-300 transition duration-300">
-              <span>BOOKMARK</span> <FaHeart />
-            </button>
+            <div className="p-4">
+              <button className="mt-2 bg-gray-200 text-gray-800 py-2 px-4 rounded flex items-center space-x-2 hover:bg-gray-300 transition duration-300 p-4">
+                <span>BOOKMARK</span> <FaHeart />
+              </button>
+            </div>
 
             <div className="flex items-center justify-center mt-8 space-x-4">
               <a href="#" className="text-blue-500">
@@ -154,6 +200,10 @@ const ViewJob = () => {
             </div>
           </aside>
         </div>
+      </div>
+      {/* footer ********************************************* */}
+      <div className="p-20">
+      <JobApply/>
       </div>
     </div>
   );

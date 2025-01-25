@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../App";
 
 const Jobs = () => {
+  let find = useNavigate()
+  let handelClick = ()=>{
+    find("/FindJob")
+  }
+
   const jobs = [
     "Web Developer",
     "Lawyer",
@@ -51,7 +57,7 @@ const Jobs = () => {
   
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-20 py-10 bg-gray-200">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-20 py-10 bg-gray-200" onClick={handelClick}>
       <div className="col-span-full text-center mb-8">
         <h1 className="text-3xl font-semibold text-gray-800">Featured Jobs</h1>
         <p className="text-lg text-gray-600">Your Job for a Future</p>

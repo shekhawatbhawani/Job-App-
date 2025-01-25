@@ -8,6 +8,7 @@ import Apply from './Components/Apply';
 import PostJob from './Components/PostJob';
 import LearnMore from './Components/LearnMore';
 import ViewJob from './Components/ViewJob';
+import FindJob from './Components/FindJob';
 function App() {
  
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/PostJob' element={<PostJob/>}></Route>
       <Route path='/PostJobsLearn' element={<LearnMore/>}></Route>
       <Route path='/ViewJob' element={<ViewJob/>}></Route>
+      <Route path='/FindJob' element={<FindJob/>}></Route>
      </Routes>
      </Router>
      <Footer/>

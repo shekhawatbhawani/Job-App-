@@ -48,7 +48,7 @@ const JobApply = () => {
       <Slider {...settings}>
         {jobRoles.map((element, index) => {
           return (
-            <div key={index} className="border-2  ml-4 max-w-64" >
+            <div key={index} className="border-2  ml-4 max-w-64 bg-white" >
               <header className="flex justify-between">
                 <div className="p-2">
                   <img
@@ -74,14 +74,18 @@ const JobApply = () => {
              
                 <div className="border-r-2 border-gray-300 p-2 text-start hover:bg-orange-500"><Link to="/ViewJob">VIEW JOB</Link></div>
                 <div className="">
-                  <div className="border-2 p-2 rounded-full hover:bg-orange-600 hover:text-white text-2xl">
-                    <FaHeart />
+                  <div className="border-2 p-2 rounded-full hover:bg-orange-100 hover:text-white text-2xl">
+                    <FaHeart onClick={(element)=>{
+                      element.target.style.color = element.target.style.color === "red" ? "" : "red"
+                    }} />
                   </div>
                 </div>
+               
               </footer>
             </div>
           );
         })}
+       
       </Slider>
     </div>
   );

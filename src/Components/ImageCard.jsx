@@ -2,8 +2,13 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from 'react-router-dom';
 
 const ImageCard = () => {
+  let find = useNavigate()
+  let clickHandel = ()=>{
+      find("/FindJob")
+  }
   const settings = {
     dots: false,
     infinite: true,
@@ -43,7 +48,7 @@ const ImageCard = () => {
   ];
 
   return (
-    <div className="mt-0 px-2 z-0">
+    <div className="mt-0 px-2 z-0" onClick={clickHandel}>
       <Slider {...settings}>
         {imageUrls.map((image, index) => {
           return (

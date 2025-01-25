@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const FilterSearch = () => {
   return (
     <div className='bg-orange-500 p-5 flex flex-wrap justify-around'>
@@ -64,7 +64,7 @@ const FilterSearch = () => {
           className='border-2 border-white p-2 font-semibold w-full md:w-auto hover:bg-white hover:text-red-500'
           aria-label="Search Now"
         >
-          SEARCH NOW
+         <Link to="/FindJob">SEARCH NOW</Link>
         </button>
       </div>
     </div>
