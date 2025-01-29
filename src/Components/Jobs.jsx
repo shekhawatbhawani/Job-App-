@@ -57,13 +57,17 @@ const Jobs = () => {
   
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-10 lg:px-20 py-10 bg-gray-200" onClick={handelClick}>
+    <div className="grid lg:grid-cols-4 gap-6  sm:grid-cols-2  md:grid-cols-3 md:gap-2  p-14 bg-gray-200 mt-10" onClick={handelClick}>
       <div className="col-span-full text-center mb-8">
         <h1 className="text-3xl font-semibold text-gray-800">Featured Jobs</h1>
         <p className="text-lg text-gray-600">Your Job for a Future</p>
       </div>
 
       {/* Wrapping the job cards in a responsive container */}
+
+ 
+
+    
       {imageUrls.map((element, index) => (
         <div
           key={index}
@@ -86,6 +90,7 @@ const Jobs = () => {
           </div>
         </div>
       ))}
+      
     </div>
   );
 };

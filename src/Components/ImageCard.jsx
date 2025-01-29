@@ -48,11 +48,11 @@ const ImageCard = () => {
   ];
 
   return (
-    <div className="mt-0 px-2 z-0" onClick={clickHandel}>
+    <div className="m-auto px-2 z-0" onClick={clickHandel}>
       <Slider {...settings}>
         {imageUrls.map((image, index) => {
           return (
-            <div key={index} className="mt-4 max-w-60 mx-auto bg-white rounded-lg shadow-lg overflow-hidden relative cursor-pointer">
+            <div key={index} className="mt-4 max-w-60 m-auto bg-white rounded-lg shadow-lg overflow-hidden relative cursor-pointer">
               <img src={image} alt={`Location Image ${index + 1}`} className="w-full h-80 object-cover" />
               <div className="absolute bottom-1 left-0 p-4">
                 <h1 className="text-2xl font-bold text-white">Location {index + 1}</h1>

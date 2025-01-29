@@ -9,22 +9,22 @@ import { RiVercelFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white p-10">
-      <div className="container mx-auto flex flex-col justify-between">
-        <div className=" mb-6 md:mb-0">
+      <div className="container mx-auto flex flex-col lg:flex-row sm:block justify-between">
+        <div className="mb-6 lg:mb-0">
           <h1 className="text-2xl font-bold mb-3">
-            <FaLayerGroup className="inline-block mr-2" /> Get the latest news !
+            <FaLayerGroup className="inline-block mr-2" /> Get the latest news!
           </h1>
         </div>
-        <div className="flex justify-between items-center mt-4">
-          <p className="text-gray-400 text-wrap">
+        <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
+          <p className="text-gray-400 text-wrap mb-4 lg:mb-0">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
             cupiditate quae nam molestias.
           </p>
-          <div>
+          <div className="flex flex-col lg:flex-row items-center">
             <input
               type="text"
               placeholder="Enter your email"
-              className="border border-gray-700 rounded-md px-4 py-2 mr-2"
+              className="border border-gray-700 rounded-md px-4 py-2 mb-4 lg:mb-0 lg:mr-2"
             />
             <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-md px-4 py-2">
               SIGN UP
@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-44 flex-wrap mt-14 mb-8">
-          <div className="">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-14 mb-8 text-sm">
+          <div>
             <h2 className="text-lg font-semibold mb-5">Service</h2>
             <ul>
               <li className="mb-3">
@@ -63,7 +63,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div>
             <h2 className="text-lg font-semibold mb-5">Company</h2>
             <ul>
               <li className="mb-3">
@@ -83,7 +83,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div>
             <h2 className="text-lg font-semibold mb-5">Helpful Links</h2>
             <ul>
               <li className="mb-3">
@@ -96,14 +96,14 @@ const Footer = () => {
                   FAQs
                 </a>
               </li>
-              <li className="mb-3"> 
+              <li className="mb-3">
                 <a href="#" className="hover:text-blue-500">
                   Live Chat
                 </a>
               </li>
             </ul>
           </div>
-          <div className="">
+          <div>
             <h2 className="text-lg font-semibold mb-5">Legal</h2>
             <ul>
               <li className="mb-3">
@@ -130,17 +130,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-end md:mt-0">
-          <a href="#" className="text-blue-500 mr-4">
+        <div className="flex items-center justify-center gap-6 mt-8">
+          <a href="#" className="text-blue-500">
             <FaFacebook className="text-3xl" />
           </a>
-          <a href="#" className="text-blue-500 mr-4">
+          <a href="#" className="text-blue-500">
             <FaInstagramSquare className="text-3xl" />
           </a>
-          <a href="#" className="text-blue-500 mr-4">
+          <a href="#" className="text-blue-500">
             <FaTwitter className="text-3xl" />
           </a>
-          <a href="#" className="text-blue-500 mr-4">
+          <a href="#" className="text-blue-500">
             <FaGithub className="text-3xl" />
           </a>
           <a href="#" className="text-blue-500">
@@ -149,13 +149,13 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center my-6">
+      <div className="flex flex-col md:flex-row justify-between items-center my-6 text-xs">
         <p>&copy; 2022. Miracle Infosoft. All rights reserved.</p>
-        <p>
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
-          <span>Cookies</span>
-        </p>
+        <div className="mt-4 md:mt-0">
+          <span className="mr-4 cursor-pointer">Terms & Conditions</span>
+          <span className="mr-4 cursor-pointer">Privacy Policy</span>
+          <span className="cursor-pointer">Cookies</span>
+        </div>
       </div>
     </footer>
   );

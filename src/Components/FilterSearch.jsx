@@ -1,74 +1,82 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import MultipleSelect from "./MultipleSelect";
+
 const FilterSearch = () => {
+  const jobRoleOptions = [
+    { value: "contentWriter", label: "Content Writer" },
+    { value: "digitalMarketing", label: "Digital Marketing" },
+    { value: "nodeJsDeveloper", label: "Node Js Developer" },
+    { value: "reactJsDeveloper", label: "React Js Developer" },
+    { value: "uiUxDesigner", label: "UI/UX Designer" },
+    { value: "webDeveloper", label: "Web Developer" },
+  ];
+  const cityOptions = [
+    { value: "bhopal", label: "Bhopal" },
+    { value: "indore", label: "Indore" },
+    { value: "jaipur", label: "Jaipur" },
+    { value: "delhi", label: "Delhi" },
+    { value: "kolkata", label: "Kolkata" },
+    { value: "kanpur", label: "Kanpur" },
+    { value: "mumbai", label: "Mumbai" },
+    { value: "pune", label: "Pune" },
+    { value: "chennai", label: "Chennai" },
+    { value: "bangalore", label: "Bangalore" },
+    { value: "hyderabad", label: "Hyderabad" },
+    { value: "lucknow", label: "Lucknow" },
+    { value: "ahmedabad", label: "Ahmedabad" },
+    { value: "chandigarh", label: "Chandigarh" },
+    { value: "coimbatore", label: "Coimbatore" },
+  ];
+  
+  const jobCategoryOptions = [
+    { value: "contentWriter", label: "Content Writer" },
+    { value: "digitalMarketing", label: "Digital Marketing" },
+    { value: "nodeJsDeveloper", label: "Node Js Developer" },
+    { value: "reactJsDeveloper", label: "React Js Developer" },
+    { value: "uiUxDesigner", label: "UI/UX Designer" },
+    { value: "webDeveloper", label: "Web Developer" },
+    { value: "graphicDesigner", label: "Graphic Designer" },
+    { value: "dataAnalyst", label: "Data Analyst" },
+    { value: "projectManager", label: "Project Manager" },
+    { value: "seoSpecialist", label: "SEO Specialist" },
+    { value: "mobileAppDeveloper", label: "Mobile App Developer" },
+    { value: "fullStackDeveloper", label: "Full Stack Developer" },
+    { value: "devOpsEngineer", label: "DevOps Engineer" },
+    { value: "marketingManager", label: "Marketing Manager" },
+    { value: "customerSupport", label: "Customer Support" },
+  ];
+  
   return (
-    <div className='bg-orange-500 p-5 flex flex-wrap justify-around'>
-      
+    <div className="bg-orange-500 p-5 flex flex-wrap justify-around">
       {/* Job Role Dropdown */}
+
       <div className="w-[90%] md:w-auto md:mb-0 mb-4 md:mr-4">
-        <select 
-          name="jobRole" 
-          id="jobRole" 
-          className='p-2 rounded-md focus:outline-none w-full'
-          aria-label="Select Job Role"
-        >
-          <option value="" disabled selected>Select Job Role</option>
-          <option value="contentWriter">Content Writer</option>
-          <option value="digitalMarketing">Digital Marketing</option>
-          <option value="nodeJsDeveloper">Node Js Developer</option>
-          <option value="reactJsDeveloper">React Js Developer</option>
-          <option value="uiUxDesigner">UI/UX Designer</option>
-          <option value="webDeveloper">Web Developer</option>
-        </select>
+        <MultipleSelect Options={jobRoleOptions} />
       </div>
-      
+
       {/* Location Dropdown */}
-      <div className="w-[90%] md:w-auto md:mb-0 mb-4 md:mr-4">
-        <select 
-          name="location" 
-          id="location" 
-          className='p-2 rounded-md focus:outline-none w-full'
-          aria-label="Select Location"
-        >
-          <option value="" disabled selected>Select Location</option>
-          <option value="bhopal">Bhopal</option>
-          <option value="indore">Indore</option>
-          <option value="jaipur">Jaipur</option>
-          <option value="delhi">Delhi</option>
-          <option value="kolkata">Kolkata</option>
-          <option value="kanpur">Kanpur</option>
-        </select>
-      </div>
-      
+     <div className="w-[90%] md:w-auto md:mb-0 mb-4 md:mr-4">
+      <MultipleSelect Options={cityOptions}/>
+
+     </div>
+
       {/* Category Dropdown */}
       <div className="w-[90%] md:w-auto md:mb-0 mb-4 md:mr-4">
-        <select 
-          name="category" 
-          id="category" 
-          className='p-2 rounded-md focus:outline-none w-full'
-          aria-label="Select Category"
-        >
-          <option value="" disabled selected>Select Category</option>
-          <option value="contentWriter">Content Writer</option>
-          <option value="digitalMarketing">Digital Marketing</option>
-          <option value="nodeJsDeveloper">Node Js Developer</option>
-          <option value="reactJsDeveloper">React Js Developer</option>
-          <option value="uiUxDesigner">UI/UX Designer</option>
-          <option value="webDeveloper">Web Developer</option>
-        </select>
+       <MultipleSelect Options={jobCategoryOptions}/>
       </div>
-      
+
       {/* Search Button */}
       <div className="w-[90%] md:w-auto md:mb-0 mb-4 md:mr-4">
-        <button 
-          className='border-2 border-white p-2 font-semibold w-full md:w-auto hover:bg-white hover:text-red-500'
+        <button
+          className="border-2 border-white p-2 font-semibold w-full md:w-auto hover:bg-white hover:text-red-500"
           aria-label="Search Now"
         >
-         <Link to="/FindJob">SEARCH NOW</Link>
+          <Link to="/FindJob">SEARCH NOW</Link>
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default FilterSearch;
