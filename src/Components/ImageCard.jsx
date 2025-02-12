@@ -48,7 +48,7 @@ const ImageCard = () => {
   ];
 
   return (
-    <div className="m-auto px-2 z-0" onClick={clickHandel}>
+    <div className="m-auto px-7 z-0" onClick={clickHandel}>
       <Slider {...settings}>
         {imageUrls.map((image, index) => {
           return (
